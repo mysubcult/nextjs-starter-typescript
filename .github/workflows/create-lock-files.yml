@@ -20,7 +20,9 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies and create package-lock.json
-        run: npm install
+        run: |
+          npm install
+          npm install --save-dev @types/react @types/node @types/react-dom typescript
 
       - name: Commit package-lock.json
         run: |
